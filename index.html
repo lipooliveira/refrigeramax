@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Refrigera Max</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+color:#333;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0a3d62;
+color:white;
+z-index:1000;
+}
+
+nav .nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#0a3d62,#1e90ff);
+color:white;
+padding:120px 0 80px 0;
+text-align:center;
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 0;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:28px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#1e90ff;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.portfolio img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+transition:0.3s;
+}
+
+.portfolio img:hover{
+transform:scale(1.05);
+}
+
+/* STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* CLIENT CARDS */
+
+.clients{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.client-card{
+position:relative;
+height:160px;
+border-radius:10px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:bold;
+font-size:18px;
+background-size:cover;
+background-position:center;
+transition:0.3s;
+}
+
+.client-card:hover{
+transform:scale(1.05);
+}
+
+.client-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.client-card span{
+position:relative;
+z-index:2;
+}
+
+/* BACKGROUNDS */
+
+.restaurante{
+background-image:url("./assets/restaurante.jpg");
+}
+
+.mercado{
+background-image:url("./assets/supermercado.jpg");
+}
+
+.hotel{
+background-image:url("./assets/hotel.jpg");
+}
+
+.clinica{
+background-image:url("./assets/clinica.jpg");
+}
+
+.condominio{
+background-image:url("./assets/condominio.jpg");
+}
+
+.comercio{
+background-image:url("./assets/comercio.jpg");
+}
+
+/* CTA */
+
+.cta{
+background:#0a3d62;
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.cta p{
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+color:white;
+font-size:14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-container">
+<strong>Refrigera Max</strong>
+
+<ul>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#portfolio">Portfólio</a></li>
+<li><a href="#clientes">Clientes</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="container">
+
+<h1>Refrigera Max</h1>
+
+<p>
+Assistência técnica especializada em infraestrutura de TI, elétrica,
+câmeras de vigilância, ar condicionado, câmaras frias e equipamentos comerciais.
+</p>
+
+<a class="btn" href="https://wa.me/5521996549624">
+Solicitar Avaliação Técnica
+</a>
+
+</div>
+
+</header>
+
+<section id="servicos">
+
+<div class="container">
+
+<h2>Serviços</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Manutenção Preventiva</h3>
+<p>Evite falhas inesperadas e aumente a vida útil dos equipamentos.</p>
+</div>
+
+<div class="card">
+<h3>Reparo Emergencial</h3>
+<p>Diagnóstico e solução rápida para falhas em sistemas técnicos.</p>
+</div>
+
+<div class="card">
+<h3>Contrato de Manutenção</h3>
+<p>Plano mensal com visitas programadas e suporte prioritário.</p>
+</div>
+
+<div class="card">
+<h3>Câmaras Frias</h3>
+<p>Instalação, manutenção e diagnóstico de refrigeração comercial.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio" style="background:#eef3f8;">
+
+<div class="container">
+
+<h2>Galeria de Serviços</h2>
+
+<div class="portfolio">
+
+<img src="./assets/comandosfoto.jpeg">
+<img src="./assets/refrigeracaofoto.jpeg">
+<img src="./assets/eletricafoto.jpeg">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Como Funciona</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>1. Avaliação Técnica</h3>
+<p>Análise completa do sistema e diagnóstico inicial.</p>
+</div>
+
+<div class="step">
+<h3>2. Relatório</h3>
+<p>Identificação de falhas e recomendações técnicas.</p>
+</div>
+
+<div class="step">
+<h3>3. Plano Preventivo</h3>
+<p>Cronograma de manutenção para evitar paradas.</p>
+</div>
+
+<div class="step">
+<h3>4. Acompanhamento</h3>
+<p>Visitas programadas e suporte especializado.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="clientes" style="background:#eef3f8;">
+
+<div class="container">
+
+<h2>Segmentos Atendidos</h2>
+
+<div class="clients">
+
+<div class="client-card restaurante">
+<span>Restaurantes</span>
+</div>
+
+<div class="client-card mercado">
+<span>Supermercados</span>
+</div>
+
+<div class="client-card hotel">
+<span>Hotéis</span>
+</div>
+
+<div class="client-card clinica">
+<span>Clínicas</span>
+</div>
+
+<div class="client-card condominio">
+<span>Condomínios</span>
+</div>
+
+<div class="client-card comercio">
+<span>Comércios em geral</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contato" class="cta">
+
+<h2>Precisa de manutenção técnica?</h2>
+
+<p>Entre em contato e solicite uma avaliação técnica.</p>
+
+<a class="btn" href="https://wa.me/5521996549624">
+Falar no WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 - Refrigera Max | Rio de Janeiro</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5521996549624">
+📲
+</a>
+
+</body>
+</html>
